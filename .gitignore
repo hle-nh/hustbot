@@ -1,0 +1,19 @@
+# Python environment
+venv/
+.venv/
+env/
+
+# Python cache
+**/__pycache__/
+*.py[cod]
+# RAG Database
+chroma_db/
+chroma.sqlite3
+
+# Secrets (API Keys)
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
