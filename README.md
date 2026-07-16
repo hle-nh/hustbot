@@ -94,35 +94,6 @@ run_backend_demo.cmd
 run_frontend_demo.cmd
 ```
 
-## Adding Demo Images
-
-To show demo screenshots on GitHub, create a folder such as:
-
-```text
-assets/demo/
-```
-
-Put screenshots there, for example:
-
-```text
-assets/demo/chat-demo.png
-assets/demo/source-citations.png
-```
-
-Then reference them in this README using relative Markdown paths:
-
-```md
-![Chat demo](assets/demo/chat-demo.png)
-![Source citations](assets/demo/source-citations.png)
-```
-
-Recommended image guidelines:
-
-- Use `.png` for UI screenshots.
-- Keep each image below a few MB so the repository stays lightweight.
-- Crop sensitive information, API keys, terminal paths, or private data before committing.
-- Prefer stable screenshots that show the question, answer, and source cards clearly.
-
 ## Setup
 
 ### Backend
