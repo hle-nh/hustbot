@@ -67,6 +67,62 @@ frontend/   React/Vite chatbot interface
 data/       Official source documents and prepared datasets
 ```
 
+## Demo
+
+On Windows, the fastest way to run the local demo is:
+
+```bat
+start_demo.cmd
+```
+
+This starts the FastAPI backend and the Vite frontend. After both services are running, open:
+
+```text
+http://localhost:5173
+```
+
+The frontend sends chat requests to the backend at:
+
+```text
+http://localhost:8000
+```
+
+For manual startup, run the backend and frontend separately:
+
+```bat
+run_backend_demo.cmd
+run_frontend_demo.cmd
+```
+
+## Adding Demo Images
+
+To show demo screenshots on GitHub, create a folder such as:
+
+```text
+assets/demo/
+```
+
+Put screenshots there, for example:
+
+```text
+assets/demo/chat-demo.png
+assets/demo/source-citations.png
+```
+
+Then reference them in this README using relative Markdown paths:
+
+```md
+![Chat demo](assets/demo/chat-demo.png)
+![Source citations](assets/demo/source-citations.png)
+```
+
+Recommended image guidelines:
+
+- Use `.png` for UI screenshots.
+- Keep each image below a few MB so the repository stays lightweight.
+- Crop sensitive information, API keys, terminal paths, or private data before committing.
+- Prefer stable screenshots that show the question, answer, and source cards clearly.
+
 ## Setup
 
 ### Backend
@@ -94,13 +150,3 @@ npm run dev
 ```
 
 The frontend runs on `http://localhost:5173` by default and calls the backend at `http://localhost:8000`.
-
-## Demo Helpers
-
-On Windows, the demo can be started with:
-
-```bat
-start_demo.cmd
-```
-
-This launches both backend and frontend using the local environment.

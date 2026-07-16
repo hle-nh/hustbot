@@ -1,4 +1,4 @@
-# HUSTBot v2 — Backend
+# HUSTBot Backend
 
 ## Cấu trúc thư mục
 
