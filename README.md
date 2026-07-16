@@ -8,9 +8,6 @@ HUSTBot is a Vietnamese academic advising chatbot for Hanoi University of Scienc
 backend/    FastAPI API, RAG pipeline, ingestion, evaluation scripts
 frontend/   React/Vite chatbot interface
 data/       Official source documents and prepared datasets
-docs/       Demo scripts, presentation notes, and pipeline examples
-report/     LaTeX project report
-tools/      Utility scripts
 ```
 
 ## Run Locally
