@@ -1,5 +1,7 @@
 # HUSTBot Backend
 
+This folder contains the FastAPI backend for HUSTBot. It handles API routes, conversation storage, retrieval, reranking, prompt construction, LLM generation, ingestion, and evaluation scripts.
+
 ## Cấu trúc thư mục
 
 ```
@@ -13,10 +15,21 @@ backend/
 │   └── rag/            # RAG modules (retriever, reranker, prompt_builder, generator)
 ├── ingest/             # PDF ingestion pipeline
 ├── alembic/            # Database migrations
-├── docker-compose.yml  # PostgreSQL
 ├── requirements.txt
-└── .env
+├── .env.example
+└── .env                # Local only, not committed
 ```
+
+PostgreSQL is configured from the root-level `docker-compose.yml`.
+
+## Trách nhiệm chính
+
+- Expose chat and health-check APIs for the frontend.
+- Store conversations and messages through SQLAlchemy models.
+- Retrieve evidence from ChromaDB and BM25 indexes.
+- Rerank candidate passages before answer generation.
+- Build prompts and call the configured LLM provider.
+- Provide ingestion and evaluation scripts for the RAG pipeline.
 
 ## Quick Start
 
@@ -56,6 +69,8 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 API docs: http://localhost:8000/docs
 
+Runtime artifacts such as `venv/`, `.env`, local SQLite databases, logs, and ChromaDB indexes are intentionally excluded from Git.
+
 ## API Endpoints
 
 | Method | Endpoint | Mô tả |
@@ -92,6 +107,9 @@ POST /chat
 |------|---------|-------|
 | `GOOGLE_API_KEY` | — | Bắt buộc |
 | `GEMINI_MODEL` | `gemini-2.5-flash` | Model ưu tiên |
+| `LLM_PROVIDER` | `google` | Provider LLM |
+| `LLM_MODEL` | `gemini-2.5-flash` | Model dùng cho generation |
+| `ENABLE_WEB_SEARCH` | `False` | Bật/tắt web search fallback |
 | `DATABASE_URL` | localhost:5432 | PostgreSQL async URL |
 | `CHROMA_DIR` | `../chroma_db` | Đường dẫn ChromaDB |
 | `RETRIEVER_K` | `6` | Số chunks trả về |

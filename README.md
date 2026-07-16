@@ -96,6 +96,8 @@ run_frontend_demo.cmd
 
 ## Setup
 
+For detailed service-specific setup, see `backend/README.md` and `frontend/README.md`.
+
 ### Backend
 
 ```bash
