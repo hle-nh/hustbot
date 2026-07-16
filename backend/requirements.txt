@@ -1,0 +1,55 @@
+# ── Web framework ──────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+
+# ── Database ────────────────────────────────────────────────────
+sqlalchemy[asyncio]>=2.0.30
+asyncpg>=0.29.0
+aiosqlite>=0.20.0
+alembic>=1.13.1
+
+# ── Config / Env ─────────────────────────────────────────────────
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+python-dotenv>=1.0.1
+
+# ── RAG / LangChain ─────────────────────────────────────────────
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-chroma>=0.1.2
+langchain-huggingface>=0.0.3
+langchain-google-genai>=1.0.6
+langchain-openai>=0.1.0
+langchain-groq>=0.1.0
+langchain-anthropic>=0.1.0
+langchain-text-splitters>=0.2.0
+transformers>=4.44.2,<5.0.0  # FlagEmbedding reranker requires tokenizer APIs removed in transformers 5.x
+duckduckgo-search>=6.0.0
+
+# ── Vector DB ───────────────────────────────────────────────────
+chromadb>=0.5.0
+
+# ── Embeddings & Retrieval ───────────────────────────────────────
+sentence-transformers>=3.0.0
+rank-bm25>=0.2.2
+
+# ── Reranker (optional — install nếu có GPU/CPU đủ mạnh) ────────────────
+FlagEmbedding>=1.2.0
+
+# ── PDF Ingestion ────────────────────────────────────────────────
+pdfplumber>=0.11.0
+pymupdf>=1.24.0
+tqdm>=4.66.0
+
+# ── Evaluation ──────────────────────────────────────────────────
+ragas>=0.1.16
+datasets>=2.19.0
+
+# ── CORS ────────────────────────────────────────────────────────────────────────────
+# (included in fastapi)
+
+# ── Rate Limiting ───────────────────────────────────────────────────────────────────────
+slowapi>=0.1.9
+cachetools>=5.3.3

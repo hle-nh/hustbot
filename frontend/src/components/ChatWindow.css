@@ -1,0 +1,59 @@
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 16px 20px 24px;
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ── HUST Watermark ──────────────────────────────────── */
+.chat-watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.chat-watermark-img {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  opacity: 0.035;
+  filter: grayscale(100%);
+  user-select: none;
+}
+
+/* ── Error ───────────────────────────────────────────── */
+.chat-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(220, 50, 50, 0.1);
+  border: 1px solid rgba(220, 50, 50, 0.25);
+  color: #f87171;
+  font-size: 13.5px;
+  animation: fadeIn 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

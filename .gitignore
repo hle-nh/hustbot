@@ -1,19 +1,71 @@
-# Python environment
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
 venv/
 .venv/
-env/
+backend/venv/
 
-# Python cache
-**/__pycache__/
-*.py[cod]
-# RAG Database
-chroma_db/
-chroma.sqlite3
+# Node / frontend
+node_modules/
+frontend/node_modules/
+dist/
+build/
+frontend/dist/
 
-# Secrets (API Keys)
+# Environment and local secrets
 .env
+*.env
+!.env.example
+backend/.env
+!backend/.env.example
 
-# OS files
+# Runtime files
+*.log
+*.pid
+backend/results/_retrieval_run_log*.txt
+backend/*.log
+backend/*.pid
+frontend/*.log
+frontend/*.pid
+*.sqlite
+*.sqlite3
+*.db
+backend/*.db
+
+# Vector database and generated local indexes
+chroma_db/
+
+# Large local source archives/documents
+data/data.zip
+data/909703909-So-Tay-Sinh-Vien-2025-1.pdf
+
+# Local generated/vendor files
+_vendor/
+project 2.pdf
+slide_contact_sheet.png
+
+# Local report/presentation materials
+report/
+docs/
+tools/build_hustbot_slides.py
+
+# OS/editor
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
 
+# LaTeX build outputs
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk

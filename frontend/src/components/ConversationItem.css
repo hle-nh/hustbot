@@ -1,0 +1,77 @@
+.conv-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+
+.conv-item:hover {
+  background: var(--bg-hover);
+}
+
+.conv-item--active {
+  background: var(--bg-active);
+}
+
+.conv-item-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  padding: 9px 10px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  min-width: 0;
+  transition: color var(--transition);
+}
+
+.conv-item:hover .conv-item-btn,
+.conv-item--active .conv-item-btn {
+  color: var(--text-primary);
+}
+
+.conv-cat-icon {
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1;
+  transition: opacity var(--transition);
+}
+
+.conv-item--active .conv-cat-icon {
+  filter: drop-shadow(0 0 4px rgba(164,16,52,0.5));
+}
+
+.conv-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conv-delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+  opacity: 0.7;
+}
+
+.conv-delete-btn:hover {
+  background: rgba(220, 50, 50, 0.15);
+  color: #f87171;
+  opacity: 1;
+}
